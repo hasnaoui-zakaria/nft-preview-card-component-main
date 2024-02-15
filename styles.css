@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "Outfit";
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background: hsl(217, 54%, 11%);
+    align-items: center;
+}
+
+main {
+    background: hsl(216, 50%, 16%);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 16px;
+    color: hsl(215, 51%, 70%);
+}
+
+h1 {
+    color:white;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.details {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsla(215, 52%, 70%, 0.207);
+}
+
+.eth::before {
+    content: url('./images/icon-ethereum.svg');
+    padding-right: 10px;
+}
+
+.time::before {
+    content: url('./images/icon-clock.svg');
+    padding-right: 10px;
+}
+
+.eth {
+    font-size: 20px;
+    font-weight: 500;
+    color:  hsl(178, 100%, 50%);
+}
+
+.author {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 36px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+span {
+    color: white;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+.image::after {
+  content: url(./images/icon-view.svg);
+  background: hsla(178, 100%, 50%, 0.5);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.image:hover::after {
+  opacity: 1; 
+}
+
+.image img {
+  width: 100%;
+  display: block;
+}
